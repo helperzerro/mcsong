@@ -1,7 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body{
-    @apply bg-zinc-800 text-white font-mono
-}
+/* npx tailwindcss -i ./styles/globals.css -o ./styles/output.css --watch */

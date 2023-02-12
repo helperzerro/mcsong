@@ -1,4 +1,6 @@
-export default function Home() {
+import React from 'react'
+
+export default function YanHuaYiLeng() {
   return (
     <div className="flex flex-col items-center border border-red-400">
       <iframe width="420" height="315" className="rounded-md my-4"

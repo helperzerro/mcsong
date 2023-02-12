@@ -1,0 +1,15 @@
+Struktur Lagu:
+1. Intro
+    Generic structure yang pertama adalah Intro atau introduction adalah bagian awal dari sebuah lagu atau bisa juga dikatakan sebagai pengantar.
+
+2. Verse
+    Verse adalah sebuah bagian dalam lagu, sebagai nyanyian di bagian awal sebeluk masuk ke bagian bridge atau chorus. Bagian ini menceritakan kisah dari lagu tersebut dan biasanya ada dua atau tiga bait dalam sebuah lagu.
+
+3. Chorus atau Refrain
+    Pada dasarnya chorus dan refrain itu berbeda, kesamaan antara keduanya hanyalah sebagai bagian yang berisi pesan utama/ inti dari cerita yang disajikan melalui lirik lagu. Dimana, bagian ini adalah yang paling sering diulang karena menyampaikan ringkasan cerita lagu.
+
+4. Bridge
+    Biasanya bridge dipakai untuk menjembatani antara bagian-bagian lagu. Misalnya, menjembatani antara chorus dengan verse atau sebaliknya. Nada yang dimainkan pada bridge ini biasanya dibuat sangat berbeda dengan nada pada verse dan chorus, sehingga bagian ini bisa tiba-tiba mengubah tempo, volume, atau instrumentasi tetapi tidak terdengar janggal.
+
+5. Coda atau Outro
+    Coda atau outro merupakan bagian akhir dari lagu tersebut. Dimana, isinya mengambil beberapa lirik dan nada yang sudah ada sebelumnya atau mengulang bagian intro, chorus atau hanya menahan diri dengan memakai instrument musik.
