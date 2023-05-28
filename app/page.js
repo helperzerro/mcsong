@@ -1,6 +1,10 @@
 import Link from "next/link";
 import React from "react";
 
+export const metadata = {
+  title: "Home",
+};
+
 export default function Home() {
   return (
     <div className="bg-red-400">
