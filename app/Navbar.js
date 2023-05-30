@@ -12,7 +12,7 @@ export default function Navbar() {
       <nav class="mx-auto container sm:flex-row sm:flex sm:items-center sm:justify-between ">
         <div class="flex justify-between items-center max-w-screen-xl px-4 md:px-6 py-2.5 sm:w-3/4">
           {/* Icon */}
-          <Link href="http://localhost:3000" class="flex items-center">
+          <Link href="http://mcsong.vercel.app" class="flex items-center">
             <Image
               src={"https://flowbite.com/docs/images/logo.svg"}
               alt="Logo"

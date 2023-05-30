@@ -10,7 +10,7 @@ export default function Lagu({ params }) {
           <iframe className="w-full aspect-video" src={lagu.linkVideo}></iframe>
 
           <div className="flex flex-col px-3">
-            <table className="text-lg my-5 border">
+            <table className="text-lg my-5">
               <tbody>
                 <tr>
                   <td className="w-[58px]">Singer</td>
