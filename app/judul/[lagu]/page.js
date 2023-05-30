@@ -4,18 +4,28 @@ export default function Lagu({ params }) {
   const lagu = lirikData[params.lagu];
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col border md:items-center mt-2">
       {lagu ? (
-        <div>
-          <iframe
-            className="rounded-md my-4 w-[420px] h-[250px] sm:w-[540px] sm:h-[320px]"
-            src={lagu.linkVideo}
-          ></iframe>
+        <div className="border md:w-3/4 lg:w-1/2">
+          <iframe className="w-full aspect-video" src={lagu.linkVideo}></iframe>
 
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-2 text-sm sm:text-lg font-medium"></div>
-            <div className="">{lagu.judul}</div>
-            <div>
+          <div className="flex flex-col px-3">
+            <table className="text-lg my-5 border">
+              <tbody>
+                <tr>
+                  <td className="w-[58px]">Singer</td>
+                  <td className=" w-[5px] pr-1">:</td>
+                  <td className="font-semibold"> {lagu.penyanyi}</td>
+                </tr>
+                <tr>
+                  <td className="w-[58px]">Title</td>
+                  <td className="w-[5px] pr-1">:</td>
+                  <td className="font-semibold"> {lagu.judul}</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div className="mb-5">
               {lagu.lirik.map((lirik, index) => (
                 <div key={index}>
                   <p>{lirik}</p>

@@ -1,6 +1,7 @@
 {
   "renshi": {
     "judul": "人是_",
+    "pinyinJudul": "renshi",
     "penyanyi":"周深",
     "penulis":"唐恬",
     "penciptaMusik":"钱雷",
@@ -102,6 +103,7 @@
   },
   "yanhuayileng": {
     "judul": "烟花易冷",
+    "pinyinJudul": "yanhuayileng",
     "penyanyi":"周深",
     "penulis":"方文山",
     "penciptaMusik":"周杰伦",
@@ -190,6 +192,7 @@
   },
   "qingzanggaoyuan": {
     "judul": "青藏高原",
+    "pinyinJudul": "qingzanggaoyuan",
     "penyanyi":"李娜",
     "penulis":"张千一",
     "penciptaMusik":"张千一",
@@ -236,6 +239,7 @@
   },
   "dayu": {
     "judul": "大鱼",
+    "pinyinJudul": "dayu",
     "penyanyi":"周深",
     "penulis":"尹约",
     "penciptaMusik":"钱雷",
@@ -301,6 +305,7 @@
   },
   "zi": {
     "judul": "紫",
+    "pinyinJudul": "zi",
     "penyanyi":"蔡健雅",
     "penulis":"田丁",
     "penciptaMusik":"波多野裕介",
