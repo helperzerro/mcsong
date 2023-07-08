@@ -1,12 +1,26 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { FaHamburger, FaSearch } from "react-icons/fa";
 import { GiCrossedBones } from "react-icons/gi";
 
 export default function Navbar() {
+  const router = useRouter();
   const [showMenuItem, setMenuItem] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+    console.log(inputValue);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    router.push(`/judul/${inputValue}`);
+  };
+
   return (
     <div className="w-full bg-gray-900 ">
       <nav class="mx-auto container sm:flex-row sm:flex sm:items-center sm:justify-between ">
@@ -75,15 +89,21 @@ export default function Navbar() {
         </div>
 
         <div className="sm:w-64 lg:w-80 py-3 px-4 ">
-          <div className="flex flex-row items-center relative">
+          <form
+            className="flex flex-row items-center relative"
+            onSubmit={handleSubmit}
+          >
             <input
               className="h-9 pl-10 pr-2 text-sm text-white border-2 border-gray-300 rounded-lg bg-transparent absolute right-0 left-0"
               placeholder="Judul lagu..."
+              onChange={handleInputChange}
+              value={inputValue}
+              type="text"
             />
-            <button className="z-10">
+            <button className="z-10" type="submit">
               <FaSearch size={25} color="white" className="ml-2" />
             </button>
-          </div>
+          </form>
         </div>
       </nav>
     </div>
