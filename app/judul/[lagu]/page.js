@@ -1,7 +1,8 @@
 import lirikData from "../../../lirik.json";
 
 export default function Lagu({ params }) {
-  const lagu = lirikData[params.lagu];
+  //  Output %E7%83%9F%E8%8A%B1%E6%98%93%E5%86%B7 sebenarnya merupakan representasi URL dari teks Bahasa Mandarin "烟花易冷". Untuk memperoleh teks asli, perlu mendekode URL tersebut. Maka lakukan : decodeURIComponent(params.lagu)
+  const lagu = lirikData[decodeURIComponent(params.lagu)];
 
   return (
     <div className="flex flex-col border md:items-center mt-2">

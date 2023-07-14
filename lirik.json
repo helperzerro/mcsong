@@ -1,5 +1,6 @@
 {
   "memory": {
+    "title":"memory",
     "judul": "MEMORY",
     "pinyinJudul": "memory",
     "penyanyi":"周深",
@@ -66,7 +67,8 @@
       "yǐ láilín"
     ]
   },
-  "kebule": {
+  "克卜勒": {
+    "title":"克卜勒",
     "judul": "克卜勒",
     "pinyinJudul": "kebule",
     "penyanyi":"周深/康姆士乐队",
@@ -144,7 +146,8 @@
       "tíxǐng wǒ wǒ bù zài shì yī kē jìmò de xīngxīng"
     ]
   },
-  "yilushenghua": {
+  "一路生花": {
+    "title":"一路生花",
     "judul": "一路生花",
     "pinyinJudul": "yilushenghua",
     "penyanyi":"周深/张韶涵",
@@ -228,7 +231,8 @@
       "ānjìng de yèwǎn nǐ zài xiǎng shéi ma"
     ]
   },
-  "xingyu": {
+  "星鱼": {
+    "title":"星鱼",
     "judul": "星鱼",
     "pinyinJudul": "xingyu",
     "penyanyi":"周深",
@@ -301,7 +305,8 @@
       "yǔ nǐ xiāng jiàn nà yīkè"
     ]
   },
-  "tingjianxiayudeshengyin": {
+  "听见下雨的声音": {
+    "title":"听见下雨的声音",
     "judul": "听见下雨的声音",
     "pinyinJudul": "tingjianxiayudeshengyin",
     "penyanyi":"周深",
@@ -369,7 +374,8 @@
       "mòmò de péi zài wǒ shēnbiān tàidù jiāndìng"
     ]
   },
-  "qinghuaci": {
+  "青花瓷": {
+    "title":"青花瓷",
     "judul": "青花瓷",
     "pinyinJudul": "qinghuaci",
     "penyanyi":"周杰伦",
@@ -458,7 +464,8 @@
       "nǎi yǎn dài xiào yì"
     ]
   },
-  "renshi": {
+  "人是": {
+    "title":"人是",
     "judul": "人是_",
     "pinyinJudul": "renshi",
     "penyanyi":"周深",
@@ -560,7 +567,8 @@
       "wèilái de tóngkǒng"
     ]
   },
-  "yanhuayileng": {
+  "烟花易冷": {
+    "title":"烟花易冷",
     "judul": "烟花易冷",
     "pinyinJudul": "yanhuayileng",
     "penyanyi":"周深",
@@ -649,7 +657,8 @@
     ]
     
   },
-  "qingzanggaoyuan": {
+  "青藏高原": {
+    "title":"青藏高原",
     "judul": "青藏高原",
     "pinyinJudul": "qingzanggaoyuan",
     "penyanyi":"李娜",
@@ -696,7 +705,8 @@
     ]
     
   },
-  "dayu": {
+  "大鱼": {
+    "title":"大鱼",
     "judul": "大鱼",
     "pinyinJudul": "dayu",
     "penyanyi":"周深",
@@ -762,7 +772,8 @@
       "Oo..."
     ]
   },
-  "zi": {
+  "紫": {
+    "title":"紫",
     "judul": "紫",
     "pinyinJudul": "zi",
     "penyanyi":"蔡健雅",
@@ -831,6 +842,7 @@
     ]
   },
   "babydosvidaniya": {
+    "title":"babydosvidaniya",
     "judul": "Baby До свидания",
     "pinyinJudul": "babydosvidaniya",
     "penyanyi":"周深",
@@ -910,7 +922,8 @@
       "mǎnhuái de xīnfù huà er méi fǎ shuō chūlái"
     ]
   },
-  "guangliang": {
+  "光亮": {
+    "title":"光亮",
     "judul": "光亮",
     "pinyinJudul": "guangliang",
     "penyanyi":"周深",
@@ -986,7 +999,8 @@
       "bù wèn sùmìng zuì wúwèi de nǐ"
     ]
   },
-  "lantingxu": {
+  "兰亭序": {
+    "title":"兰亭序",
     "judul": "兰亭序",
     "pinyinJudul": "lantingxu",
     "penyanyi":"周深",
@@ -1073,7 +1087,8 @@
       "wǒ děng chūnléi lái tíxǐng nǐ ài shéi"
     ]
   },
-  "xiangsi": {
+  "相思": {
+    "title":"相思",
     "judul": "相思",
     "pinyinJudul": "xiangsi",
     "penyanyi":"周深",

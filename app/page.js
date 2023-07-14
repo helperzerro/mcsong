@@ -27,8 +27,8 @@ export default function Home() {
               <td className="border border-white">{item.penyanyi}</td>
               <td className="border border-white">
                 <Link
-                  className="transition hover:scale-50 hover:font-bold hover:text-shadow border"
-                  href={`/judul/${item.pinyinJudul}`}
+                  className="transition hover:scale-50 hover:font-bold hover:text-shadow"
+                  href={`/judul/${item.title.toLocaleLowerCase()}`}
                 >
                   {item.judul}
                 </Link>

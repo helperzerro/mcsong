@@ -13,12 +13,12 @@ export default function Navbar() {
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
-    console.log(inputValue);
+    // console.log(inputValue.toLocaleLowerCase());
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    router.push(`/judul/${inputValue}`);
+    router.push(`/judul/${inputValue.toLocaleLowerCase()}`);
   };
 
   return (
@@ -46,13 +46,13 @@ export default function Navbar() {
             }`}
           >
             <Link
-              href="/judul/renshi"
+              href="/judul/人是"
               class="mr-6 text-lg font-medium text-gray-500 dark:text-white hover:scale-125 transition"
             >
               人是
             </Link>
             <Link
-              href="/judul/zi"
+              href="/judul/紫"
               class="text-lg font-medium text-blue-600 dark:text-blue-500 hover:scale-125 transition"
             >
               紫
