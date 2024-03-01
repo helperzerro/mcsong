@@ -113,7 +113,7 @@ export default function Navbar() {
         <div className="flex">
           {/* Icon App */}
           <div>
-            <Link href="http://localhost:3000/" class="flex items-center">
+            <Link href="http://mcsong.vercel.app" class="flex items-center">
               <Image
                 src={"https://flowbite.com/docs/images/logo.svg"}
                 alt="Logo"
