@@ -8,6 +8,7 @@ import { GiCrossedBones } from "react-icons/gi";
 {
   /* Contoh Penulisan : <button className={`hamburger ${isOpen ? 'is-active' : ''}`} onClick={handleClick}> */
 }
+import lirikData from "../lirik.json";
 
 export default function Navbar() {
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function Navbar() {
   const [isOpenDroplink2, setIsOpenDroplink2] = useState(false);
   const [isOpenDroplink3, setIsOpenDroplink3] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const lagu = lirikData;
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -25,6 +27,26 @@ export default function Navbar() {
   const handleSubmit = (event) => {
     event.preventDefault();
     router.push(`/judul/${inputValue.toLocaleLowerCase()}`);
+  };
+
+  // sorting artist
+  const removeDuplicates = (arr, prop) => {
+    // arr, berisi array data lirik keseluruhan
+    // prop, berisi nama parameternya saja ("penyanyi")
+    const semuaNama = [];
+
+    arr.forEach((item) => {
+      const splitNames = item.penyanyi
+        .split(/[\/&]/)
+        .map((name) => name.trim()); // Memisahkan nama berdasarkan '/' atau '&' dan kemudian menghapus spasi dari setiap bagian nama
+      semuaNama.push(...splitNames); // Menambahkan hasil pemisahan ke dalam array semuaNama
+    });
+
+    const namaArtist = semuaNama.filter(
+      (nama, index, arr) => arr.findIndex((item) => item === nama) === index
+    );
+
+    return namaArtist;
   };
 
   return (
@@ -41,12 +63,13 @@ export default function Navbar() {
 
         {/* Icon App */}
         <div>
+          {/* http://mcsong.vercel.app */}
           <Link href="http://mcsong.vercel.app" class="flex items-center">
             <Image
               src={"https://flowbite.com/docs/images/logo.svg"}
               alt="Logo"
               width={40}
-              height={20}
+              height={40}
               className="mr-2"
             />
           </Link>
@@ -90,12 +113,12 @@ export default function Navbar() {
         <div className="flex">
           {/* Icon App */}
           <div>
-            <Link href="http://mcsong.vercel.app" class="flex items-center">
+            <Link href="http://localhost:3000/" class="flex items-center">
               <Image
                 src={"https://flowbite.com/docs/images/logo.svg"}
                 alt="Logo"
                 width={40}
-                height={20}
+                height={40}
                 className="mr-2"
               />
             </Link>
@@ -114,7 +137,7 @@ export default function Navbar() {
               className="pl-5 py-2 flex flex-row items-center
              text-white rounded hover:opacity-80"
             >
-              Product
+              Artist
               <svg
                 className={`w-2.5 h-2.5 ml-2 ${
                   isOpenDroplink1
@@ -146,12 +169,17 @@ export default function Navbar() {
                 }}
                 className="absolute top-8 -right-14 mt-2 w-48 bg-white rounded-lg shadow-lg"
               >
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
-                >
-                  Option 1
-                </a>
+                {removeDuplicates(Object.values(lirikData), "penyanyi").map(
+                  (item, index) => (
+                    <Link
+                      key={index}
+                      href={`${item}`}
+                      className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white"
+                    >
+                      {item}
+                    </Link>
+                  )
+                )}
               </div>
             )}
           </div>

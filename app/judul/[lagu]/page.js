@@ -30,7 +30,7 @@ export default function Lagu({ params }) {
               {lagu.lirik.map((lirik, index) => (
                 <div key={index}>
                   <p>{lirik}</p>
-                  <p>{lagu.pinyin[index]}</p>
+                  <p className="border text-sm">{lagu.pinyin[index]}</p>
                   {lagu["newLine"].includes(index + 1) && <br />}
                 </div>
               ))}
