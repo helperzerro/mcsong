@@ -52,19 +52,11 @@ export default function Navbar() {
   return (
     <div className="w-full bg-gray-900 ">
       {/* Navbar Mobile Site*/}
-      <div class="mx-auto flex justify-between items-center sm:px-10 px-4 py-2.5 lg:hidden ">
-        {/* Sign Up Button */}
-        <div>
-          <button className="text-sm border px-2 py-1 rounded-md text-white">
-            Sign up
-          </button>
-        </div>
-        {/* Close Sign Up Button */}
-
+      <div class="mx-auto flex justify-between items-center sm:px-10 px-4 py-2.5 md:hidden sm:container sm:mx-auto">
         {/* Icon App */}
         <div>
           {/* http://mcsong.vercel.app */}
-          <Link href="http://mcsong.vercel.app" class="flex items-center">
+          <Link href="" class="flex items-center">
             <Image
               src={"https://flowbite.com/docs/images/logo.svg"}
               alt="Logo"
@@ -109,11 +101,11 @@ export default function Navbar() {
       {/* Close Navbar Mobile Site */}
 
       {/* Navbar Website Site */}
-      <div class="mx-auto justify-between items-center lg:px-4 py-2.5 hidden lg:flex bg-gray-800">
+      <div class="mx-auto justify-between items-center lg:px-4 py-2.5 hidden md:flex bg-gray-800 container">
         <div className="flex">
           {/* Icon App */}
           <div>
-            <Link href="http://mcsong.vercel.app" class="flex items-center">
+            <Link href="" class="flex items-center">
               <Image
                 src={"https://flowbite.com/docs/images/logo.svg"}
                 alt="Logo"
@@ -167,7 +159,7 @@ export default function Navbar() {
                 onMouseLeave={() => {
                   setIsOpenDroplink1(false);
                 }}
-                className="absolute top-8 -right-14 mt-2 w-48 bg-white rounded-lg shadow-lg"
+                className="absolute top-8 -right-14 mt-2 w-40 bg-white rounded-lg shadow-lg h-80 overflow-y-auto no-scrollbar z-10"
               >
                 {removeDuplicates(Object.values(lirikData), "penyanyi").map(
                   (item, index) => (
@@ -193,7 +185,7 @@ export default function Navbar() {
                 setIsOpenDroplink2(false);
               }}
               className="pl-5 py-2 flex flex-row items-center
-             text-white rounded hover:opacity-80"
+             text-white rounded hover:opacity-80 line-through"
             >
               Solutions
               <svg
@@ -229,7 +221,7 @@ export default function Navbar() {
               >
                 <a
                   href="#"
-                  className="block px-4 py-2 text-gray-800  hover:text-white"
+                  className="block px-4 py-2 text-gray-800 line-through hover:text-white"
                 >
                   Option 1
                 </a>
@@ -240,7 +232,7 @@ export default function Navbar() {
           <div className="relative">
             <button
               className="pl-5 py-2 flex flex-row items-center
-             text-white rounded hover:opacity-80"
+             text-white rounded hover:opacity-80 line-through"
             >
               Pricing
             </button>
@@ -268,22 +260,6 @@ export default function Navbar() {
             </form>
           </div>
           {/* Close Searching */}
-
-          {/* Sign Up Button */}
-          <div className="pr-4">
-            <button className="px-2 py-1 rounded-md text-white hover:opacity-80">
-              Sign in
-            </button>
-          </div>
-          {/* Close Sign Up Button */}
-
-          {/* Sign Up Button */}
-          <div>
-            <button className="border px-2 py-1 rounded-md text-white hover:opacity-80">
-              Sign up
-            </button>
-          </div>
-          {/* Close Sign Up Button */}
         </div>
       </div>
       {/* Close Navbar Website Site */}
