@@ -1,16 +1,31 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import lirikData from "../lirik.json";
+import Pagination from "./components/pagination";
 
 export const metadata = {
   title: "Home",
 };
 
 export default function Home() {
-  const lagu = lirikData;
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10; // Jumlah item per halaman
+  const totalItems = Object.keys(lirikData).length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  // Fungsi untuk menampilkan item yang sesuai dengan halaman saat ini
+  const currentItems = Object.values(lirikData).slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
-    <div className="items-center flex justify-center py-4">
+    <div className="items-center flex justify-center py-4 flex-col gap-5">
       <table className="w-[450px] border-separate border border-slate-500  bg-gray-700 text-white">
         <thead className="bg-gray-800 ">
           <tr className="border border-white ">
@@ -21,9 +36,11 @@ export default function Home() {
         </thead>
 
         <tbody>
-          {Object.values(lirikData).map((item, index) => (
+          {currentItems.map((item, index) => (
             <tr key={index} className="text-center ">
-              <td className="border border-white ">{index + 1}</td>
+              <td className="border border-white ">
+                {(currentPage - 1) * itemsPerPage + index + 1}
+              </td>
               <td className="border border-white">{item.penyanyi}</td>
               <td className="border border-white">
                 <Link
@@ -37,6 +54,12 @@ export default function Home() {
           ))}
         </tbody>
       </table>
+
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 }
