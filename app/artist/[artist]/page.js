@@ -1,5 +1,5 @@
 import React from "react";
-import lirikData from "../../lirik.json";
+import lirikData from "../../../lirik.json";
 import Link from "next/link";
 
 export default function artist({ params }) {

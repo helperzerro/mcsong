@@ -10,6 +10,7 @@ import { GiCrossedBones } from "react-icons/gi";
 import lirikData from "../lirik.json";
 import ArtistDropdown from "./components/dropArtist";
 import Searching from "./components/searching";
+import AlbumDropdown from "./components/daftarAlbum";
 
 export default function Navbar() {
   const [showMenuItem, setMenuItem] = useState(false);
@@ -85,6 +86,9 @@ export default function Navbar() {
           <Searching />
 
           <ArtistDropdown lirikData={lirikData} />
+
+          {/* Dropdown Album */}
+          <AlbumDropdown />
         </div>
       )}
 
@@ -105,61 +109,11 @@ export default function Navbar() {
           </div>
           {/* Close Icon App */}
 
-          {/* Dropdown Link */}
+          {/* Dropdown Artist*/}
           <ArtistDropdown lirikData={lirikData} />
 
-          <div className="relative">
-            <button
-              onMouseEnter={() => {
-                setIsOpenDroplink2(true);
-              }}
-              onMouseLeave={() => {
-                setIsOpenDroplink2(false);
-              }}
-              className="pl-5 py-2 flex flex-row items-center
-             text-white rounded hover:opacity-80 line-through"
-            >
-              Solutions
-              <svg
-                className={`w-2.5 h-2.5 ml-2 ${
-                  isOpenDroplink2
-                    ? "translate-y-[2.5px]"
-                    : "translate-y-[0.5px]"
-                } text-gray-400 transition-transform duration-300`}
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg>
-            </button>
-
-            {isOpenDroplink2 && (
-              <div
-                onMouseEnter={() => {
-                  setIsOpenDroplink2(true);
-                }}
-                onMouseLeave={() => {
-                  setIsOpenDroplink2(false);
-                }}
-                className="absolute top-8 -right-14 mt-2 w-48 bg-white rounded-lg shadow-lg"
-              >
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-gray-800 line-through hover:text-white"
-                >
-                  Option 1
-                </a>
-              </div>
-            )}
-          </div>
+          {/* Dropdown Album */}
+          <AlbumDropdown />
 
           <div className="relative">
             <button

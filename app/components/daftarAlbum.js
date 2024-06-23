@@ -1,28 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const ArtistDropdown = ({ lirikData }) => {
+const AlbumDropdown = () => {
   const [isOpenDroplink1, setIsOpenDroplink1] = useState(false);
-
-  // sorting artist
-  const removeDuplicates = (arr) => {
-    // arr, berisi array data lirik keseluruhan
-    // prop, berisi nama parameternya saja ("penyanyi")
-    const semuaNama = [];
-
-    arr.forEach((item) => {
-      const splitNames = item.penyanyi
-        .split(/[\/&]/)
-        .map((name) => name.trim()); // Memisahkan nama berdasarkan '/' atau '&' dan kemudian menghapus spasi dari setiap bagian nama
-      semuaNama.push(...splitNames); // Menambahkan hasil pemisahan ke dalam array semuaNama
-    });
-
-    const namaArtist = semuaNama.filter(
-      (nama, index, arr) => arr.findIndex((item) => item === nama) === index
-    );
-
-    return namaArtist;
-  };
 
   return (
     <div className="relative mr-4">
@@ -30,7 +10,7 @@ const ArtistDropdown = ({ lirikData }) => {
         onClick={() => setIsOpenDroplink1(!isOpenDroplink1)}
         className="py-2 flex flex-row items-center text-white rounded hover:opacity-80"
       >
-        Artist
+        Daftar Album
         <svg
           className={`w-2.5 h-2.5 ml-2 ${
             isOpenDroplink1 ? "translate-y-[2.5px]" : "translate-y-[0.5px]"
@@ -60,17 +40,15 @@ const ArtistDropdown = ({ lirikData }) => {
           }}
           className="absolute mt-2 w-40 bg-white rounded-lg shadow-lg h-80 overflow-y-auto no-scrollbar z-10"
         >
-          {removeDuplicates(Object.values(lirikData)).map((item, index) => (
-            <Link key={index} href={`artist/${item}`}>
-              <div className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white">
-                {item}
-              </div>
-            </Link>
-          ))}
+          <Link key={""} href={"album/周深"}>
+            <div className="block px-4 py-2 text-gray-800 hover:bg-blue-500 hover:text-white">
+              周深
+            </div>
+          </Link>
         </div>
       )}
     </div>
   );
 };
 
-export default ArtistDropdown;
+export default AlbumDropdown;
